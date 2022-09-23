@@ -25,6 +25,9 @@ public String getName(){
 public void setName(String name){
     this.name = name;
 }
+public double getBalance(){
+    return this.balance;
+}
 public String toString(){
     return "Kontot "+name+" har saldot "+String.format("%.2f",balance);
 }

@@ -5,6 +5,7 @@ public class Main {
      Account pellesKonto = new Account("Pelles konto",10000);
      Account lisasKonto = new Account();
      Account arnesKonto = new Account(15000);
+     Account majasKonto = new SavingsAccount(0.25,78000,"majasKonto");
 
 
      System.out.println(lisasKonto);
@@ -19,6 +20,11 @@ public class Main {
     System.out.println(pellesKonto);
 
     System.out.println(evasKonto+"\n"+pellesKonto+"\n"+lisasKonto+"\n"+arnesKonto);
-    
+
+    System.out.println(majasKonto);
+    System.out.print("Efter ränta på "+ ((SavingsAccount) majasKonto).getInterestRate()+"% så är saldot nu ");
+    ((SavingsAccount) majasKonto).addInterest();
+    System.out.println(majasKonto.getBalance());
+
     }
 }
