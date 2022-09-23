@@ -26,5 +26,13 @@ public class Main {
     ((SavingsAccount) majasKonto).addInterest();
     System.out.println(majasKonto.getBalance());
 
+    ((SavingsAccount) majasKonto).transfer(pellesKonto,6000);
+    System.out.println(pellesKonto);
+
+    Account annasKonto = new SavingsAccount(0.01,100000,"Annas konto");
+    System.out.println(annasKonto);
+    ((SavingsAccount) majasKonto).transfer(annasKonto,100000);
+    ((SavingsAccount) majasKonto).transfer(annasKonto,10000);
+    System.out.println(annasKonto);
     }
 }
